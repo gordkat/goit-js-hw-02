@@ -5,12 +5,7 @@ const isLoginValid = function (login) {
 };
 
 const isLoginUnique = function (allLogins, login) {
-  for (const item of allLogins) {
-    if (item === login) {
-      return false;
-    }
-  }
-  return true;
+  return !allLogins.includes(login);
 };
 
 const addLogin = function (allLogins, login) {
